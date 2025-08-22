@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gradient – Color Tools</title>
+  <meta name="description" content="선형/원형 그라디언트 생성">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/"><span data-i18n="app_title">Color Tools</span></a>
+      <nav class="nav">
+        <a href="picker.html" data-i18n="nav_picker">Color Picker</a>
+        <a href="palette.html" data-i18n="nav_palette">Palette</a>
+        <a href="contrast.html" data-i18n="nav_contrast">Contrast</a>
+        <a href="gradient.html" aria-current="page" data-i18n="nav_gradient">Gradient</a>
+      </nav>
+      <div>
+        <select id="langSelect" class="lang-select" aria-label="Language">
+          <option value="ko">KO</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="theme-toggle" aria-label="테마 토글">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container gradient-grid">
+    <section class="panel">
+      <h2 data-i18n="gradient_input">입력</h2>
+      <div class="row">
+        <label>유형</label>
+        <select id="gType">
+          <option value="linear">Linear</option>
+          <option value="radial">Radial</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>각도</label>
+        <input id="angle" type="number" min="0" max="360" value="45"> deg
+      </div>
+      <div class="row">
+        <button id="addStop" data-i18n="gradient_add_stop">스탑 추가</button>
+      </div>
+      <div id="stops" class="stop-list" aria-live="polite"></div>
+
+      <div class="btn-row">
+        <button id="copyCss" data-i18n="gradient_copy_css">CSS 복사</button>
+        <button id="downloadPng" data-i18n="gradient_download_png">PNG 다운로드</button>
+        <button id="downloadSvg" data-i18n="gradient_download_svg">SVG 다운로드</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="gradient_preview">미리보기</h2>
+      <div id="gPreview" class="preview-large"></div>
+      <p><small id="cssOut" style="color:var(--muted);"></small></p>
+    </section>
+
+    <section class="ad ad-bottom" aria-label="advertisement">
+      <div class="ad-box" data-ad-slot="in-article"></div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/utils/color.js"></script>
+  <script src="assets/js/gradient.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contrast – Color Tools</title>
+  <meta name="description" content="WCAG 2.2 대비 체크">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/"><span data-i18n="app_title">Color Tools</span></a>
+      <nav class="nav">
+        <a href="picker.html" data-i18n="nav_picker">Color Picker</a>
+        <a href="palette.html" data-i18n="nav_palette">Palette</a>
+        <a href="contrast.html" aria-current="page" data-i18n="nav_contrast">Contrast</a>
+        <a href="gradient.html" data-i18n="nav_gradient">Gradient</a>
+      </nav>
+      <div>
+        <select id="langSelect" class="lang-select" aria-label="Language">
+          <option value="ko">KO</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="theme-toggle" aria-label="테마 토글">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contrast-grid">
+    <section class="panel">
+      <h2 data-i18n="contrast_input">입력</h2>
+      <div class="row">
+        <input id="fgInput" type="text" placeholder="#111111 (전경 텍스트)">
+      </div>
+      <div class="row">
+        <input id="bgInput" type="text" placeholder="#ffffff (배경)">
+      </div>
+      <div class="row">
+        <label for="fontSize" class="visually-hidden">Font size</label>
+        <input id="fontSize" type="number" min="8" step="0.5" placeholder="16" aria-label="font size"> px
+        <button id="swapColors" data-i18n="contrast_swap">색 교체</button>
+      </div>
+      <div class="row">
+        <label><input id="isBold" type="checkbox"> Bold</label>
+      </div>
+      <div class="row">
+        <button id="applyContrast" data-i18n="contrast_calc">계산</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="contrast_result">결과</h2>
+      <p><span data-i18n="contrast_ratio">대비비율</span>: <strong id="ratio">-</strong></p>
+      <p><span data-i18n="contrast_grade">등급</span>: <span id="grade" class="badge">-</span></p>
+      <div id="contrastPreview" class="preview" style="display:flex;align-items:center;justify-content:center;">
+        미리보기 텍스트
+      </div>
+    </section>
+
+    <section class="ad ad-bottom" aria-label="advertisement">
+      <div class="ad-box" data-ad-slot="in-article"></div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/utils/color.js"></script>
+  <script src="assets/js/contrast.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Picker – Color Tools</title>
+  <meta name="description" content="HEX/RGB/HSL/HSV 변환, 스포이드 지원 컬러 피커">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/"><span data-i18n="app_title">Color Tools</span></a>
+      <nav class="nav">
+        <a href="picker.html" aria-current="page" data-i18n="nav_picker">Color Picker</a>
+        <a href="palette.html" data-i18n="nav_palette">Palette</a>
+        <a href="contrast.html" data-i18n="nav_contrast">Contrast</a>
+        <a href="gradient.html" data-i18n="nav_gradient">Gradient</a>
+      </nav>
+      <div>
+        <select id="langSelect" class="lang-select" aria-label="Language">
+          <option value="ko">KO</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="theme-toggle" aria-label="테마 토글">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container picker-wrap">
+    <section class="panel">
+      <h2 data-i18n="picker_input">입력</h2>
+      <div class="row">
+        <label for="hexInput" class="visually-hidden">HEX</label>
+        <input id="hexInput" type="text" placeholder="#1e90ff">
+        <button id="pickColor" data-i18n="picker_system">시스템 피커</button>
+        <button id="eyeDrop" data-i18n="picker_eyedrop">스포이드</button>
+      </div>
+      <div class="row">
+        <input id="rgbInput" type="text" placeholder="rgb(30,144,255)">
+      </div>
+      <div class="row">
+        <input id="hslInput" type="text" placeholder="hsl(209,100%,56%)">
+      </div>
+      <div class="row">
+        <input id="hsvInput" type="text" placeholder="hsv(209,88%,100%)">
+      </div>
+
+      <div class="copy-grid">
+        <button data-copy="hex" data-i18n="picker_copy_hex">HEX 복사</button>
+        <button data-copy="rgb" data-i18n="picker_copy_rgb">RGB 복사</button>
+        <button data-copy="hsl" data-i18n="picker_copy_hsl">HSL 복사</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="picker_preview">미리보기</h2>
+      <div id="preview" class="preview"></div>
+      <h3 data-i18n="picker_recent">최근 사용 색</h3>
+      <div id="recent" class="swatches"></div>
+    </section>
+
+    <section class="ad ad-bottom" aria-label="advertisement">
+      <div class="ad-box" data-ad-slot="in-article"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/utils/color.js"></script>
+  <script src="assets/js/picker.js"></script>
+</body>
+</html>
+

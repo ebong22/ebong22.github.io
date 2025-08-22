@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Tools – 색상 도구 세트</title>
+  <meta name="description" content="컬러 피커, 팔레트 생성, 대비 체크(WCAG), 그라디언트 생성 도구 모음">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/"><span data-i18n="app_title">Color Tools</span></a>
+      <nav class="nav">
+        <a href="picker.html" data-i18n="nav_picker">Color Picker</a>
+        <a href="palette.html" data-i18n="nav_palette">Palette</a>
+        <a href="contrast.html" data-i18n="nav_contrast">Contrast</a>
+        <a href="gradient.html" data-i18n="nav_gradient">Gradient</a>
+      </nav>
+      <div>
+        <select id="langSelect" class="lang-select" aria-label="Language">
+          <option value="ko">KO</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="theme-toggle" aria-label="테마 토글">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 data-i18n="hero_title">색상 도구 세트</h1>
+      <p data-i18n="hero_sub">컬러 피커, 팔레트 생성, 대비 체크, 그라디언트를 간편하게.</p>
+    </section>
+
+    <section class="ad ad-top" aria-label="advertisement">
+      <!-- AdSense placeholder: reserve space to avoid CLS -->
+      <div class="ad-box" data-ad-slot="top-728x90"></div>
+    </section>
+
+    <section class="tool-grid">
+      <a class="tool-card" href="picker.html">
+        <h2>Color Picker</h2>
+        <p>HEX/RGB/HSL/HSV 변환, 스포이드 지원</p>
+      </a>
+      <a class="tool-card" href="palette.html">
+        <h2>Palette</h2>
+        <p>조화 팔레트 및 톤 스케일 생성</p>
+      </a>
+      <a class="tool-card" href="contrast.html">
+        <h2>Contrast</h2>
+        <p>WCAG 2.2 대비 체크 등급</p>
+      </a>
+      <a class="tool-card" href="gradient.html">
+        <h2>Gradient</h2>
+        <p>선형/원형 그라디언트, CSS 복사</p>
+      </a>
+    </section>
+
+    <section class="ad ad-bottom" aria-label="advertisement">
+      <div class="ad-box" data-ad-slot="in-article"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Color Tools</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palette – Color Tools</title>
+  <meta name="description" content="조화 팔레트 및 톤 스케일 생성">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/"><span data-i18n="app_title">Color Tools</span></a>
+      <nav class="nav">
+        <a href="picker.html" data-i18n="nav_picker">Color Picker</a>
+        <a href="palette.html" aria-current="page" data-i18n="nav_palette">Palette</a>
+        <a href="contrast.html" data-i18n="nav_contrast">Contrast</a>
+        <a href="gradient.html" data-i18n="nav_gradient">Gradient</a>
+      </nav>
+      <div>
+        <select id="langSelect" class="lang-select" aria-label="Language">
+          <option value="ko">KO</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle" class="theme-toggle" aria-label="테마 토글">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container palette-grid">
+    <section class="panel">
+      <h2 data-i18n="palette_input">입력</h2>
+      <div class="row">
+        <input id="baseColor" type="text" placeholder="#4f46e5 (기본색)">
+        <button id="pickBase">색 선택</button>
+      </div>
+      <div class="row">
+        <label>조화</label>
+        <select id="harmony">
+          <option value="complementary">Complementary</option>
+          <option value="analogous">Analogous</option>
+          <option value="triadic">Triadic</option>
+          <option value="tetradic">Tetradic</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>스케일 단계</label>
+        <input id="steps" type="number" min="5" max="12" value="10">
+      </div>
+      <div class="btn-row">
+        <button id="generate" data-i18n="palette_generate">생성</button>
+        <button id="copyCss" data-i18n="palette_copy_css">CSS 변수 복사</button>
+        <button id="copyJson" data-i18n="palette_copy_json">JSON 복사</button>
+        <button id="downloadSvg" data-i18n="palette_download_svg">SVG 다운로드</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="palette_palette">팔레트</h2>
+      <div id="harmonySwatches" class="swatches"></div>
+      <h3 data-i18n="palette_scale">스케일</h3>
+      <div id="scale" class="scale-grid"></div>
+    </section>
+
+    <section class="ad ad-bottom" aria-label="advertisement">
+      <div class="ad-box" data-ad-slot="in-article"></div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/utils/color.js"></script>
+  <script src="assets/js/palette.js"></script>
+</body>
+</html>
+
