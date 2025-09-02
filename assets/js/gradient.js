@@ -40,7 +40,9 @@
   function getStops(){
     const rows=[...stops.querySelectorAll('.stop-item')];
     return rows.map(r=>{
-      const [colorEl, , posEl] = r.querySelectorAll('input');
+      const inputs = r.querySelectorAll('input');
+      const colorEl = inputs[0];
+      const posEl = inputs[1];
       const hex = ColorUtils.parseHex(colorEl.value) ? colorEl.value : '#000000';
       let pos = parseFloat(posEl.value||'0');
       pos = Math.max(0, Math.min(100, pos));
