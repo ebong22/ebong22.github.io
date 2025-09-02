@@ -12,24 +12,9 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="/"><span data-i18n="app_title">Color Tools</span></a>
-      <nav class="nav">
-        <a href="picker.html" data-i18n="nav_picker">Color Picker</a>
-        <a href="palette.html" aria-current="page" data-i18n="nav_palette">Palette</a>
-        <a href="contrast.html" data-i18n="nav_contrast">Contrast</a>
-        <a href="gradient.html" data-i18n="nav_gradient">Gradient</a>
-      </nav>
-      <div>
-        <select id="langSelect" class="lang-select" aria-label="Language">
-          <option value="ko">KO</option>
-          <option value="en">EN</option>
-        </select>
-        <button id="themeToggle" class="theme-toggle" aria-label="테마 토글">🌓</button>
-      </div>
-    </div>
-  </header>
+  <!-- 공통 헤더 include -->
+  <div id="header-placeholder"></div>
+  <script src="assets/js/include-header.js"></script>
 
   <main class="container palette-grid">
     <section class="panel">

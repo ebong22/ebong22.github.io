@@ -12,29 +12,14 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="/"><span data-i18n="app_title">Color Tools</span></a>
-      <nav class="nav">
-        <a href="picker.html" data-i18n="nav_picker">Color Picker</a>
-        <a href="palette.html" data-i18n="nav_palette">Palette</a>
-        <a href="contrast.html" data-i18n="nav_contrast">Contrast</a>
-        <a href="gradient.html" data-i18n="nav_gradient">Gradient</a>
-      </nav>
-      <div>
-        <select id="langSelect" class="lang-select" aria-label="Language">
-          <option value="ko">KO</option>
-          <option value="en">EN</option>
-        </select>
-        <button id="themeToggle" class="theme-toggle" aria-label="테마 토글">🌓</button>
-      </div>
-    </div>
-  </header>
+  <!-- 공통 헤더 include -->
+  <div id="header-placeholder"></div>
+  <script src="assets/js/include-header.js"></script>
 
   <main class="container">
     <section class="hero">
-      <h1 data-i18n="hero_title">색상 도구 세트</h1>
-      <p data-i18n="hero_sub">컬러 피커, 팔레트 생성, 대비 체크, 그라디언트를 간편하게.</p>
+  <h1>Tintly</h1>
+  <p>컬러 피커, 팔레트, 대비 체크, 그라디언트 – 심플한 컬러 툴킷</p>
     </section>
 
     <section class="ad ad-top" aria-label="advertisement">
